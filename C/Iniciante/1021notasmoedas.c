@@ -1,0 +1,47 @@
+#include <stdio.h>
+int main() {
+    double n;
+    int nota,centavo,c100,c50,c20,c10,c5,c2,m1,m50,m25,m10,m05,m01;
+    scanf("%lf",&n);
+    nota=n;
+    c100=nota/100;
+    nota-=c100*100;
+    c50=nota/50;
+    nota-=c50*50;
+    c20=nota/20;
+    nota-=c20*20;
+    c10=nota/10;
+    nota-=c10*10;
+    c5=nota/5;
+    nota-=c5*5;
+    c2=nota/2;
+    nota-=c2*2;
+    m1=nota/1;
+    nota-=m1*1;
+    n*=100;
+    centavo=(int)n;
+    centavo%=100;
+    m50=centavo/50;
+    centavo%=50;
+    m25=centavo/25;
+    centavo%=25;
+    m10=centavo/10;
+    centavo%=10;
+    m05=centavo/5;
+    m01=centavo%5;
+    printf ("NOTAS:\n");
+    printf ("%d nota(s) de R$ 100.00\n",c100);
+    printf ("%d nota(s) de R$ 50.00\n",c50);
+    printf ("%d nota(s) de R$ 20.00\n",c20);
+    printf ("%d nota(s) de R$ 10.00\n",c10);
+    printf ("%d nota(s) de R$ 5.00\n",c5);
+    printf ("%d nota(s) de R$ 2.00\n",c2);
+    printf ("MOEDAS:\n");
+    printf ("%d moeda(s) de R$ 1.00\n",m1);
+    printf ("%d moeda(s) de R$ 0.50\n",m50);
+    printf ("%d moeda(s) de R$ 0.25\n",m25);
+    printf ("%d moeda(s) de R$ 0.10\n",m10);
+    printf ("%d moeda(s) de R$ 0.05\n",m05);
+    printf ("%d moeda(s) de R$ 0.01\n",m01);
+    return 0;
+}
